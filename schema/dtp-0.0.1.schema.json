@@ -1,0 +1,181 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://digitaltrustprofile.org/schema/dtp-0.0.1.schema.json",
+  "title": "Digital Trust Profile",
+  "description": "Digital Trust Profile Specification v0.0.1",
+  "type": "object",
+
+  "required": [
+    "dtp_version",
+    "profile",
+    "service",
+    "verification",
+    "artificial_intelligence",
+    "governance",
+    "privacy",
+    "contact"
+  ],
+
+  "properties": {
+
+    "dtp_version": {
+      "type": "string",
+      "description": "Digital Trust Profile specification version.",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+
+    "profile": {
+      "type": "object",
+      "required": [
+        "version",
+        "status"
+      ],
+      "properties": {
+        "version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "draft",
+            "published",
+            "deprecated"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "service": {
+      "type": "object",
+      "required": [
+        "name",
+        "provider",
+        "purpose",
+        "website",
+        "domain"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "provider": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "website": {
+          "type": "string",
+          "format": "uri"
+        },
+        "domain": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "verification": {
+      "type": "object",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "none",
+            "self_declared",
+            "verified"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "artificial_intelligence": {
+      "type": "object",
+      "required": [
+        "ai_usage",
+        "primary_purpose",
+        "ai_capabilities",
+        "human_oversight",
+        "explainability"
+      ],
+      "properties": {
+        "ai_usage": {
+          "type": "boolean"
+        },
+        "primary_purpose": {
+          "type": "string"
+        },
+        "ai_capabilities": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "human_oversight": {
+          "type": "boolean"
+        },
+        "explainability": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "governance": {
+      "type": "object",
+      "required": [
+        "decision_support",
+        "automated_decisions",
+        "methodology_published"
+      ],
+      "properties": {
+        "decision_support": {
+          "type": "boolean"
+        },
+        "automated_decisions": {
+          "type": "boolean"
+        },
+        "methodology_published": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "privacy": {
+      "type": "object",
+      "required": [
+        "privacy_policy_available"
+      ],
+      "properties": {
+        "privacy_policy_available": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "contact": {
+      "type": "object",
+      "required": [
+        "email"
+      ],
+      "properties": {
+        "email": {
+          "type": "string",
+          "format": "email"
+        }
+      },
+      "additionalProperties": false
+    }
+
+  },
+
+  "additionalProperties": false
+}

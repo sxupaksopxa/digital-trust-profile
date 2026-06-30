@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Digital Trust Profile (DTP)
 
 > A simple transparency standard for digital services.
@@ -161,4 +160,5 @@ contact@bkleindigital.com
 Digital Trust Profile (DTP)
 
 A simple transparency standard for digital services.
->>>>>>> ef8b07322c2216c9d60c1dc382bee561fce3d99f
+
+contact@bkleindigital.com

@@ -156,9 +156,8 @@ Maintained by **BKlein Digital Labs**.
 Building practical AI solutions for a digital world.
 
 contact@bkleindigital.com
+
 =======
 Digital Trust Profile (DTP)
 
 A simple transparency standard for digital services.
-
-contact@bkleindigital.com
